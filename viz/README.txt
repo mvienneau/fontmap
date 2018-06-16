@@ -1,3 +1,1 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/michael-vienneau/pen/MXEPRp.
-
- 3D scatter plot with Plotly.js.
+javascript for visualizing (eventually) images in a 3d space. for now, points will do
