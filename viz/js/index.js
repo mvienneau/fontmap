@@ -1,10 +1,10 @@
-Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/3d-scatter.csv', function(err, rows){
+Plotly.d3.csv('https://raw.githubusercontent.com/mvienneau/fontmap/master/datapoints.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) 
           { return row[key]; });
       }
 var trace1 = {
-  x:unpack(rows, 'x1'),  y: unpack(rows, 'y1'), z: unpack(rows, 'z1'), 
+  x:unpack(rows, 'x'),  y: unpack(rows, 'y'), z: unpack(rows, 'z'), 
   mode: 'markers',
   marker: {
     size: 12,
@@ -16,22 +16,8 @@ var trace1 = {
   },
   type: 'scatter3d'
 };
-var trace2 = {
-  x:unpack(rows, 'x2'),  y: unpack(rows, 'y2'), z: unpack(rows, 'z2'), 
-  mode: 'markers',
-  marker: {
-    color: 'rgb(127, 127, 127)',
-    size: 12,
-    symbol: 'circle',
-    line: {
-      color: 'rgb(204, 204, 204)',
-      width: 1
-    },
-    opacity: 0.9
-  },
-  type: 'scatter3d'
-};
-var data = [trace1, trace2];
+
+var data = [trace1];
 var layout = {
       dragmode: false,
       margin: {
